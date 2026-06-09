@@ -1,849 +1,974 @@
-<!-- VØID Brand Manifesto — Jobs × Ye Deep Fusion -->
+<!--
+  VØID Brand Manifesto
+  A garment is architecture you wear.
+  Jobs × Ye — Deep Fusion Edition
+-->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>VØID — One Vessel. All Lives.</title>
-  <meta name="description" content="VØID. One Vessel. All Lives. We don't design for occasions. We design for humans.">
+  <meta name="description" content="VØID. A garment is architecture you wear. One Vessel. All Lives.">
 
-  <!-- WeChat Share Meta -->
+  <!-- WeChat / Open Graph -->
   <meta property="og:title" content="VØID — One Vessel. All Lives.">
-  <meta property="og:description" content="We don't design for occasions. We design for humans.">
+  <meta property="og:description" content="A garment is architecture you wear.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
 
+  <!-- Fonts -->
   <style>
-    @font-face {
-      font-family: 'InstrumentSans';
-      src: url('./_shared/fonts/InstrumentSans-Regular.ttf') format('truetype');
-      font-weight: 400;
-    }
-    @font-face {
-      font-family: 'InstrumentSans';
-      src: url('./_shared/fonts/InstrumentSans-Bold.ttf') format('truetype');
-      font-weight: 700;
-    }
-    @font-face {
-      font-family: 'InstrumentSerif';
-      src: url('./_shared/fonts/InstrumentSerif-Regular.ttf') format('truetype');
-      font-weight: 400;
-    }
-    @font-face {
-      font-family: 'InstrumentSerif';
-      src: url('./_shared/fonts/InstrumentSerif-Italic.ttf') format('truetype');
-      font-weight: 400;
-      font-style: italic;
-    }
+    @font-face { font-family:'InstrumentSans'; src:url('./_shared/fonts/InstrumentSans-Regular.ttf') format('truetype'); font-weight:400; }
+    @font-face { font-family:'InstrumentSans'; src:url('./_shared/fonts/InstrumentSans-Bold.ttf') format('truetype'); font-weight:700; }
+    @font-face { font-family:'InstrumentSerif'; src:url('./_shared/fonts/InstrumentSerif-Regular.ttf') format('truetype'); font-weight:400; }
+    @font-face { font-family:'InstrumentSerif'; src:url('./_shared/fonts/InstrumentSerif-Italic.ttf') format('truetype'); font-weight:400; font-style:italic; }
   </style>
 
   <style>
     :root {
-      --void: #0a0a0a;
-      --void-soft: #141414;
-      --ash: #1d1d1f;
-      --bone: #e8e4de;
-      --sand: #c4b8a8;
-      --earth: #a09080;
-      --dust: #6b6056;
-      --mist: #86868b;
-      --rule: #2a2a2c;
-      --accent: #d4a574;
-      --font: 'InstrumentSans', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-serif: 'InstrumentSerif', Georgia, serif;
+      /* Palette — excavated from earth and ash */
+      --void:        #080808;
+      --void-soft:   #0f0f0f;
+      --ash:         #1a1a1a;
+      --bone:        #e6e2dc;
+      --bone-dim:    #c8c4be;
+      --sand:        #b8a898;
+      --earth:       #8a7a6a;
+      --dust:        #5c5048;
+      --rule:        #242424;
+      --accent:      #c9a87c;
+      --accent-glow: rgba(201,168,124,0.08);
+
+      --font:       'InstrumentSans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'InstrumentSerif', 'Times New Roman', serif;
+      --font-mono:  'SF Mono', 'Fira Code', monospace;
+
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 2rem;
+      --space-lg: 4rem;
+      --space-xl: 7rem;
+      --space-2xl: 10rem;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 16px; scroll-behavior: smooth; }
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
 
     body {
       font-family: var(--font);
       color: var(--bone);
       background: var(--void);
-      line-height: 1.65;
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
     }
 
-    /* ========== NOISE TEXTURE OVERLAY ========== */
+    /* ── Film grain overlay ── */
     body::before {
       content: '';
       position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
       pointer-events: none;
       z-index: 9999;
-      opacity: 0.4;
+      mix-blend-mode: overlay;
     }
 
-    /* ========== HERO ========== */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 4rem 2rem;
-      position: relative;
-      background: var(--void);
-    }
-    .hero-eyebrow {
-      font-size: 0.6rem;
-      letter-spacing: 0.4em;
-      text-transform: uppercase;
-      color: var(--dust);
-      margin-bottom: 3rem;
-      font-weight: 400;
-    }
-    .hero-name {
-      font-size: clamp(5rem, 15vw, 10rem);
+    /* ── Selection ── */
+    ::selection { background: var(--accent); color: var(--void); }
+
+    /* ── Typography scale ── */
+    .display {
+      font-size: clamp(4.5rem, 14vw, 11rem);
       font-weight: 700;
-      letter-spacing: -0.06em;
-      line-height: 0.85;
-      margin-bottom: 2rem;
+      letter-spacing: -0.055em;
+      line-height: 0.82;
       color: var(--bone);
     }
-    .hero-name .o-slash {
-      color: var(--accent);
-      font-weight: 400;
+    .display .slash { color: var(--accent); font-weight: 400; }
+
+    .headline {
+      font-size: clamp(1.6rem, 3.8vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1.05;
+      color: var(--bone);
     }
-    .hero-line {
+
+    .subhead {
       font-family: var(--font-serif);
       font-style: italic;
-      font-size: clamp(1rem, 2.2vw, 1.25rem);
+      font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+      color: var(--sand);
+      line-height: 1.45;
+      letter-spacing: 0.01em;
+    }
+
+    .body {
+      font-size: clamp(0.9rem, 1.4vw, 1rem);
+      line-height: 1.75;
       color: var(--earth);
-      max-width: 420px;
-      line-height: 1.5;
-      letter-spacing: 0.02em;
     }
-    .hero-line-cn {
-      font-size: clamp(0.85rem, 1.6vw, 0.95rem);
-      color: var(--dust);
-      max-width: 420px;
-      line-height: 1.5;
-      margin-top: 0.4rem;
-    }
-    .hero-scroll {
-      position: absolute;
-      bottom: 3rem;
+
+    .caption {
+      font-family: var(--font-mono);
       font-size: 0.6rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
       color: var(--dust);
-      animation: breathe 3s ease-in-out infinite;
-    }
-    @keyframes breathe {
-      0%, 100% { opacity: 0.2; }
-      50% { opacity: 0.6; }
     }
 
-    /* ========== SECTIONS ========== */
-    section {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 7rem 2rem;
-    }
-    section.narrow { max-width: 520px; }
-    section.wide { max-width: 720px; }
-
-    h2 {
-      font-size: clamp(1.8rem, 4.5vw, 2.6rem);
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      margin-bottom: 0.8rem;
-      color: var(--bone);
-    }
-    h2.left { text-align: left; }
-    h2.center { text-align: center; }
-
-    .h2-en {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: clamp(0.8rem, 1.6vw, 0.95rem);
-      color: var(--accent);
-      margin-bottom: 1rem;
-      letter-spacing: 0.02em;
-    }
-    .h2-en.left { text-align: left; }
-    .h2-en.center { text-align: center; }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: var(--earth);
-      margin-bottom: 0.9rem;
-    }
-    p.lead {
-      font-size: 1.1rem;
-      color: var(--sand);
-      line-height: 1.6;
-    }
-    p.center { text-align: center; }
-
-    .en {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: 0.85rem;
-      color: var(--dust);
-      display: block;
-      margin-top: 0.15rem;
-      line-height: 1.5;
-    }
-
-    /* ========== DIVIDER ========== */
-    .divider {
-      width: 40px;
-      height: 1px;
-      background: var(--accent);
-      margin: 3rem auto;
-      opacity: 0.5;
-    }
-    .divider.left { margin: 3rem 0; }
-
-    /* ========== SCENE STRIPS ========== */
-    .scenes {
-      display: flex;
-      gap: 0;
-      margin: 2.5rem 0 0;
-      border-top: 1px solid var(--rule);
-      border-bottom: 1px solid var(--rule);
-    }
-    .scene {
-      flex: 1;
-      padding: 1.5rem 1rem;
-      border-right: 1px solid var(--rule);
-    }
-    .scene:last-child { border-right: none; }
-    .scene-time {
-      font-size: 0.6rem;
-      letter-spacing: 0.15em;
+    .label {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 0.5rem;
       font-weight: 700;
-    }
-    .scene-text {
-      font-size: 0.85rem;
-      color: var(--earth);
-      line-height: 1.5;
-      margin-bottom: 0.3rem;
-    }
-    .scene-en {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: 0.75rem;
-      color: var(--dust);
-      line-height: 1.4;
-      opacity: 0.6;
-    }
-    .scene-outfit {
-      font-weight: 700;
-      color: var(--sand);
-      font-size: 0.8rem;
-      margin-top: 0.5rem;
     }
 
-    /* ========== MANIFESTO — Consciousness Stream ========== */
-    .manifesto {
-      background: var(--void-soft);
-      padding: 7rem 2rem;
+    /* ── Layout ── */
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+    .container-wide { max-width: 720px; }
+    .container-narrow { max-width: 480px; }
+
+    section {
+      padding: var(--space-xl) var(--space-md);
       position: relative;
     }
-    .manifesto::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
+
+    /* ── Hairline dividers ── */
+    .hairline {
       height: 1px;
-      background: linear-gradient(90deg, transparent, var(--rule), transparent);
+      background: linear-gradient(90deg, transparent 0%, var(--rule) 20%, var(--rule) 80%, transparent 100%);
+      border: none;
+      margin: 0;
     }
-    .manifesto-inner {
-      max-width: 540px;
-      margin: 0 auto;
+    .hairline-left {
+      height: 1px;
+      background: var(--rule);
+      width: 60px;
+      border: none;
+      margin: var(--space-md) 0;
     }
-    .manifesto .m-label {
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: var(--space-lg) var(--space-md);
+      position: relative;
+    }
+    .hero-eyebrow {
+      margin-bottom: var(--space-lg);
+    }
+    .hero-name {
+      margin-bottom: var(--space-md);
+    }
+    .hero-sub {
+      margin-bottom: var(--space-xs);
+    }
+    .hero-sub-cn {
+      font-size: clamp(0.8rem, 1.4vw, 0.9rem);
+      color: var(--dust);
+      letter-spacing: 0.05em;
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: var(--space-lg);
+      font-family: var(--font-mono);
       font-size: 0.55rem;
-      letter-spacing: 0.35em;
+      letter-spacing: 0.3em;
       text-transform: uppercase;
       color: var(--dust);
-      text-align: center;
-      margin-bottom: 2.5rem;
+      animation: fadePulse 4s ease-in-out infinite;
+    }
+    @keyframes fadePulse {
+      0%, 100% { opacity: 0.15; }
+      50%      { opacity: 0.5; }
     }
 
-    /* Burst */
-    .manifesto .burst {
-      font-family: var(--font);
-      font-weight: 700;
-      font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+    /* ── PROBLEM ── */
+    .problem-section { padding-top: var(--space-2xl); }
+    .problem-lead {
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      color: var(--bone-dim);
+      line-height: 1.65;
+      margin-bottom: var(--space-md);
+    }
+    .problem-body {
+      margin-bottom: var(--space-sm);
+    }
+    .problem-question {
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
       color: var(--bone);
-      text-align: center;
-      line-height: 1.4;
-      margin-bottom: 0.2rem;
-    }
-    .manifesto .burst-cn {
-      font-family: var(--font);
-      font-weight: 400;
-      font-size: clamp(0.95rem, 2vw, 1.05rem);
-      color: var(--dust);
-      text-align: center;
-      margin-bottom: 1.2rem;
-    }
-
-    /* Stream */
-    .manifesto .stream {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: clamp(1rem, 2vw, 1.15rem);
-      color: var(--sand);
-      text-align: center;
-      line-height: 1.8;
-      margin-bottom: 0.3rem;
-    }
-    .manifesto .stream-cn {
-      font-family: var(--font);
-      font-style: normal;
-      font-size: clamp(0.9rem, 1.8vw, 0.98rem);
-      color: var(--dust);
-      text-align: center;
-      margin-bottom: 0.3rem;
-    }
-
-    /* CAPS */
-    .manifesto .caps {
-      font-family: var(--font);
-      font-weight: 700;
-      font-size: clamp(1.3rem, 3.5vw, 1.8rem);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent);
-      text-align: center;
-      margin: 2rem 0 0.4rem;
-    }
-
-    /* Vulnerable */
-    .manifesto .vulnerable {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: clamp(0.95rem, 1.8vw, 1.05rem);
-      color: var(--earth);
-      text-align: center;
-      line-height: 1.8;
-      margin-top: 1.8rem;
-    }
-    .manifesto .vulnerable-cn {
-      font-family: var(--font);
-      font-style: normal;
-      font-size: 0.9rem;
-      color: var(--dust);
-      text-align: center;
-    }
-
-    /* Closer */
-    .manifesto .closer {
-      margin-top: 2.5rem;
-      font-family: var(--font);
-      font-weight: 700;
-      font-size: clamp(1.6rem, 4vw, 2.2rem);
-      letter-spacing: -0.03em;
-      color: var(--bone);
-      text-align: center;
-      line-height: 1.15;
-    }
-    .manifesto .closer-accent { color: var(--accent); }
-
-    /* ========== PHILOSOPHY ========== */
-    .philosophy-item {
-      margin-bottom: 3.5rem;
-      padding-bottom: 3.5rem;
-      border-bottom: 1px solid var(--rule);
-    }
-    .philosophy-item:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
-    }
-    .philosophy-item h3 {
-      font-size: 1.15rem;
       font-weight: 700;
       letter-spacing: -0.02em;
-      margin-bottom: 0.2rem;
-      color: var(--bone);
+      margin-top: var(--space-lg);
     }
-    .philosophy-item .h3-en {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: 0.85rem;
+
+    /* Scene timeline */
+    .timeline {
+      margin-top: var(--space-lg);
+      border-top: 1px solid var(--rule);
+    }
+    .timeline-row {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: var(--space-md);
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
+    }
+    .timeline-time {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
       color: var(--accent);
-      margin-bottom: 0.5rem;
+      padding-top: 0.2rem;
     }
-    .philosophy-item p {
-      font-size: 0.95rem;
+    .timeline-content {
+      display: grid;
+      gap: var(--space-xs);
+    }
+    .timeline-text {
+      font-size: 0.9rem;
       color: var(--earth);
-      margin-bottom: 0.6rem;
+      line-height: 1.6;
     }
-    .philosophy-item p:last-child { margin-bottom: 0; }
-    .philosophy-example {
+    .timeline-en {
       font-family: var(--font-serif);
       font-style: italic;
-      font-size: 0.88rem;
-      color: var(--sand);
-      padding-left: 1rem;
-      border-left: 1px solid var(--rule);
-      line-height: 1.6;
-      margin-top: 0.8rem;
-    }
-    .philosophy-example .ex-cn {
-      font-family: var(--font);
-      font-style: normal;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: var(--dust);
-      display: block;
+      line-height: 1.5;
+    }
+    .timeline-tag {
+      font-size: 0.7rem;
+      color: var(--sand);
+      font-weight: 700;
+      letter-spacing: 0.05em;
       margin-top: 0.2rem;
     }
 
-    /* ========== VOICE ========== */
-    .voice-section {
-      padding: 7rem 2rem;
-      background: var(--ash);
-      position: relative;
+    /* ── MANIFESTO ── */
+    .manifesto-section {
+      background: var(--void-soft);
+      padding: var(--space-2xl) var(--space-md);
     }
-    .voice-section::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--rule), transparent);
+    .manifesto-inner { max-width: 520px; margin: 0 auto; }
+
+    .m-label {
+      text-align: center;
+      margin-bottom: var(--space-lg);
     }
-    .voice-section h2 { color: var(--bone); }
-    .voice-section .h2-en { color: var(--accent); }
-    .voice-section p {
-      color: var(--earth);
-      max-width: 480px;
-      margin: 0 auto 1rem;
+
+    /* Burst — staccato */
+    .m-burst {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 700;
+      color: var(--bone);
+      text-align: center;
+      line-height: 1.3;
+      margin-bottom: 0.15rem;
     }
-    .voice-pair {
-      display: flex;
-      gap: 2.5rem;
-      margin: 2.5rem auto 0;
-      max-width: 580px;
-      text-align: left;
+    .m-burst-cn {
+      font-size: clamp(0.9rem, 1.8vw, 1rem);
+      color: var(--dust);
+      text-align: center;
+      margin-bottom: var(--space-md);
     }
-    .voice-col { flex: 1; }
-    .voice-dont,
-    .voice-do {
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 0.6rem;
-    }
-    .voice-dont { color: var(--dust); }
-    .voice-do { color: var(--accent); }
-    .voice-col p {
-      font-size: 0.88rem;
-      color: var(--earth);
-      margin-bottom: 0.45rem;
-      text-align: left;
-    }
-    .voice-col p:last-child { margin-bottom: 0; }
-    .voice-col .voice-en {
+
+    /* Stream — legato */
+    .m-stream {
       font-family: var(--font-serif);
       font-style: italic;
-      font-size: 0.75rem;
-      color: var(--dust);
-      display: block;
-      margin-top: 0.1rem;
-    }
-
-    /* ========== PRODUCT — Architecture ========== */
-    .product-section {
+      font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+      color: var(--sand);
       text-align: center;
-      padding: 7rem 2rem;
-      background: var(--void-soft);
-      position: relative;
+      line-height: 1.85;
+      margin-bottom: 0.25rem;
     }
-    .product-section::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--rule), transparent);
+    .m-stream-cn {
+      font-size: clamp(0.85rem, 1.5vw, 0.92rem);
+      color: var(--dust);
+      text-align: center;
+      margin-bottom: 0.25rem;
     }
-    .product-section h2 { margin-bottom: 0.4rem; }
-    .product-section .h2-en { margin-bottom: 1.2rem; }
 
-    .product-name {
-      font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+    /* Prophecy — fortissimo */
+    .m-prophecy {
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
       font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      text-align: center;
+      margin: var(--space-lg) 0 0.3rem;
+    }
+
+    /* Vulnerable — pianissimo */
+    .m-vulnerable {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(0.9rem, 1.6vw, 1rem);
+      color: var(--earth);
+      text-align: center;
+      line-height: 1.85;
+      margin-top: var(--space-lg);
+    }
+    .m-vulnerable-cn {
+      font-size: 0.85rem;
+      color: var(--dust);
+      text-align: center;
+    }
+
+    /* Closer — crescendo */
+    .m-closer {
+      margin-top: var(--space-lg);
+      font-size: clamp(1.5rem, 3.8vw, 2.2rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--bone);
+      text-align: center;
+      line-height: 1.1;
+    }
+    .m-closer span { color: var(--accent); }
+
+    /* ── PHILOSOPHY ── */
+    .philosophy-section { padding-top: var(--space-2xl); }
+    .philosophy-intro {
+      margin-bottom: var(--space-lg);
+    }
+    .philosophy-item {
+      padding: var(--space-lg) 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .philosophy-item:first-child {
+      border-top: 1px solid var(--rule);
+    }
+    .philosophy-item:last-child {
+      border-bottom: none;
+    }
+    .philosophy-num {
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.2em;
+      color: var(--dust);
+      margin-bottom: var(--space-xs);
+    }
+    .philosophy-title {
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+      font-weight: 700;
+      color: var(--bone);
       letter-spacing: -0.02em;
       margin-bottom: 0.15rem;
+    }
+    .philosophy-title-en {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: var(--space-sm);
+    }
+    .philosophy-body {
+      margin-bottom: var(--space-sm);
+    }
+    .philosophy-quote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.88rem;
+      color: var(--sand);
+      padding-left: var(--space-sm);
+      border-left: 1px solid var(--rule);
+      line-height: 1.65;
+    }
+    .philosophy-quote .q-cn {
+      font-family: var(--font);
+      font-style: normal;
+      font-size: 0.8rem;
+      color: var(--dust);
+      display: block;
+      margin-top: 0.15rem;
+    }
+
+    /* ── VOICE ── */
+    .voice-section {
+      background: var(--ash);
+      padding: var(--space-2xl) var(--space-md);
+    }
+    .voice-intro {
+      text-align: center;
+      margin-bottom: var(--space-lg);
+    }
+    .voice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .voice-col h4 {
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-sm);
+    }
+    .voice-col-dont h4 { color: var(--dust); }
+    .voice-col-do h4   { color: var(--accent); }
+    .voice-col p {
+      font-size: 0.85rem;
+      color: var(--earth);
+      line-height: 1.6;
+      margin-bottom: var(--space-xs);
+    }
+    .voice-col p:last-child { margin-bottom: 0; }
+    .voice-col .v-en {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.72rem;
+      color: var(--dust);
+      display: block;
+      margin-top: 0.05rem;
+    }
+
+    /* ── PRODUCT ── */
+    .product-section {
+      background: var(--void-soft);
+      padding: var(--space-2xl) var(--space-md);
+      text-align: center;
+    }
+    .product-intro {
+      margin-bottom: var(--space-lg);
+    }
+    .product-name {
+      font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
       color: var(--bone);
+      margin-bottom: 0.1rem;
     }
     .product-name-en {
       font-family: var(--font-serif);
       font-style: italic;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: var(--dust);
-      margin-bottom: 1.2rem;
+      margin-bottom: var(--space-md);
     }
     .product-tagline {
       font-family: var(--font-serif);
       font-style: italic;
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: var(--sand);
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.2rem;
     }
     .product-tagline-cn {
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: var(--dust);
-      margin-bottom: 2rem;
+      margin-bottom: var(--space-lg);
     }
 
-    .product-architecture {
+    /* Architecture grid */
+    .arch-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1px;
       background: var(--rule);
-      max-width: 480px;
-      margin: 2rem auto;
+      max-width: 440px;
+      margin: 0 auto var(--space-md);
     }
     .arch-cell {
       background: var(--void-soft);
-      padding: 1.5rem 1rem;
+      padding: var(--space-md) var(--space-sm);
       text-align: center;
     }
     .arch-label {
-      font-size: 0.6rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.3rem;
-      font-weight: 700;
+      margin-bottom: var(--space-xs);
     }
     .arch-value {
-      font-size: 0.85rem;
-      color: var(--sand);
+      font-size: 0.82rem;
+      color: var(--bone-dim);
       font-weight: 700;
-      line-height: 1.5;
+      line-height: 1.55;
     }
     .arch-value-en {
       font-family: var(--font-serif);
       font-style: italic;
-      font-size: 0.78rem;
-      color: var(--dust);
-      margin-top: 0.2rem;
-    }
-
-    /* ========== MISSION ========== */
-    .mission-statement {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: clamp(1.2rem, 2.8vw, 1.5rem);
-      text-align: center;
-      color: var(--sand);
-      line-height: 1.5;
-      margin-bottom: 0.3rem;
-    }
-    .mission-statement-cn {
-      font-size: 0.95rem;
-      color: var(--earth);
-      text-align: center;
-      margin-bottom: 0.6rem;
-    }
-    .mission-footnote {
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--dust);
-    }
-    .mission-footnote-cn {
-      text-align: center;
-      font-size: 0.8rem;
+      font-size: 0.72rem;
       color: var(--dust);
       margin-top: 0.15rem;
     }
 
-    /* ========== ONE MORE THING ========== */
-    .omt {
-      background: var(--void);
+    /* ── MISSION ── */
+    .mission-section {
       text-align: center;
-      padding: 7rem 2rem;
-      position: relative;
+      padding: var(--space-2xl) var(--space-md);
     }
-    .omt::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--rule), transparent);
-    }
-    .omt-label {
-      font-size: 0.6rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.8rem;
-    }
-    .omt h2 {
-      color: var(--bone);
-      font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+    .mission-quote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      color: var(--sand);
+      line-height: 1.5;
       margin-bottom: 0.3rem;
     }
-    .omt .h2-en {
-      color: var(--accent);
-      margin-bottom: 1.2rem;
-    }
-    .omt p {
-      color: var(--earth);
-      max-width: 500px;
-      margin: 0 auto 0.7rem;
+    .mission-quote-cn {
       font-size: 0.95rem;
+      color: var(--earth);
+      margin-bottom: var(--space-sm);
     }
-    .omt p:last-child {
-      margin-top: 2rem;
+    .mission-note {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--dust);
+    }
+    .mission-note-cn {
+      font-size: 0.75rem;
+      color: var(--dust);
+      margin-top: 0.2rem;
+    }
+
+    /* ── ONE MORE THING ── */
+    .omt-section {
+      padding: var(--space-2xl) var(--space-md);
+      text-align: center;
+    }
+    .omt-label {
+      margin-bottom: var(--space-sm);
+    }
+    .omt-headline {
+      margin-bottom: 0.2rem;
+    }
+    .omt-sub {
+      margin-bottom: var(--space-lg);
+    }
+    .omt-body {
+      max-width: 480px;
+      margin: 0 auto var(--space-sm);
+    }
+    .omt-body:last-of-type {
+      margin-bottom: 0;
+    }
+    .omt-body .omt-en {
       font-family: var(--font-serif);
       font-style: italic;
-      color: var(--sand);
-      font-size: 1rem;
-    }
-    .omt .omt-en {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--dust);
       display: block;
       margin-top: 0.1rem;
     }
-
-    /* ========== FOOTER ========== */
-    footer {
-      text-align: center;
-      padding: 3rem 2rem;
-      background: var(--void-soft);
-      position: relative;
+    .omt-closing {
+      margin-top: var(--space-lg);
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--sand);
     }
-    footer::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--rule), transparent);
+
+    /* ── FOOTER ── */
+    footer {
+      padding: var(--space-lg) var(--space-md);
+      text-align: center;
+      background: var(--void-soft);
     }
     footer p {
-      font-size: 0.7rem;
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.15em;
       color: var(--dust);
-      margin: 0;
-      letter-spacing: 0.05em;
     }
 
-    /* ========== RESPONSIVE ========== */
+    /* ── RESPONSIVE ── */
     @media (max-width: 640px) {
-      section { padding: 5rem 1.5rem; }
-      .manifesto { padding: 5rem 1.5rem; }
-      .omt { padding: 5rem 1.5rem; }
-      .voice-section { padding: 5rem 1.5rem; }
-      .product-section { padding: 5rem 1.5rem; }
-      .scenes { flex-direction: column; }
-      .scene { border-right: none; border-bottom: 1px solid var(--rule); padding: 1.2rem; }
-      .scene:last-child { border-bottom: none; }
-      .voice-pair { flex-direction: column; gap: 1.5rem; }
-      .product-architecture { grid-template-columns: 1fr; }
+      :root {
+        --space-md: 1.5rem;
+        --space-lg: 3rem;
+        --space-xl: 5rem;
+        --space-2xl: 7rem;
+      }
+      .voice-grid { grid-template-columns: 1fr; gap: var(--space-lg); }
+      .arch-grid { grid-template-columns: 1fr; }
+      .timeline-row { grid-template-columns: 55px 1fr; gap: var(--space-sm); }
+    }
+
+    @media (min-width: 1024px) {
+      .container { max-width: 560px; }
+      .container-wide { max-width: 680px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ========== HERO ========== -->
+  <!-- ════════════════════════════════════════
+       HERO
+       ════════════════════════════════════════ -->
   <section class="hero">
-    <div class="hero-eyebrow">Not multi-scene. No-scene.</div>
-    <h1 class="hero-name">V<span class="o-slash">Ø</span>ID</h1>
-    <p class="hero-line">One Vessel. All Lives.</p>
-    <p class="hero-line-cn">一件容器。所有人生。</p>
+    <div class="hero-eyebrow caption">Not multi-scene. No-scene.</div>
+    <h1 class="hero-name display">V<span class="slash">Ø</span>ID</h1>
+    <p class="hero-sub subhead">One Vessel. All Lives.</p>
+    <p class="hero-sub-cn">一件容器。所有人生。</p>
     <span class="hero-scroll">Scroll</span>
   </section>
 
-  <!-- ========== THE PROBLEM ========== -->
-  <section class="narrow">
-    <div class="h2-en left">The Problem</div>
-    <h2 class="left">你的早晨，<br>从一场战争开始。</h2>
-    <p class="lead">西装。运动服。社交装。一天三套衣服。三个身份。三次"我是谁"的危机。<span class="en">Suit. Gym wear. Social outfit. Three sets of clothes a day. Three identities. Three "who am I" crises.</span></p>
-    <p>这不是生活方式。这是服装行业一百年来强加给你的暴政。他们把世界切成三块——商务、运动、社交——每一块都有自己的规则、自己的面料、自己的审美。你被要求在它们之间"切换"。换衣服。换心态。换自己。<span class="en">This isn't a lifestyle. It's a tyranny the clothing industry imposed on you for a century. They sliced the world into three — business, sport, social — each with its own rules, its own fabrics, its own aesthetics. You're expected to "switch" between them. Change clothes. Change mindset. Change yourself.</span></p>
-    <p>但你的身体没有变。你还是你。你的早晨不应该花在"今天穿什么"上。<span class="en">But your body hasn't changed. You're still you. Your morning shouldn't be spent on "what should I wear today."</span></p>
-    <p class="lead">为什么你的衣服要逼你变成别人？<span class="en">Why should your clothes force you to become someone else?</span></p>
+  <hr class="hairline">
 
-    <div class="scenes">
-      <div class="scene">
-        <div class="scene-time">08:00</div>
-        <div class="scene-text">挤进会议室，西装领带勒着脖子，衬衫黏在背上。空调房里刚凉下来，出地铁又是一身汗。</div>
-        <div class="scene-en">Squeezing into a meeting room, tie choking your neck, shirt sticking to your back.</div>
-        <div class="scene-outfit">盔甲 #1 / Armor #1</div>
+  <!-- ════════════════════════════════════════
+       THE PROBLEM
+       ════════════════════════════════════════ -->
+  <section class="problem-section container">
+    <div class="caption" style="margin-bottom:var(--space-sm);">The Problem</div>
+    <h2 class="headline" style="margin-bottom:var(--space-md);">你的早晨，<br>从一场战争开始。</h2>
+
+    <p class="problem-lead">
+      西装。运动服。社交装。一天三套衣服。三个身份。三次"我是谁"的危机。
+      <span class="subhead" style="display:block; margin-top:0.3rem; font-size:0.85rem;">Suit. Gym wear. Social outfit. Three sets of clothes a day. Three identities. Three crises of self.</span>
+    </p>
+
+    <p class="problem-body body">
+      这不是生活方式。这是服装行业一百年来强加给你的暴政。他们把世界切成三块——商务、运动、社交——每一块都有自己的规则、自己的面料、自己的审美。你被要求在它们之间"切换"。换衣服。换心态。换自己。
+      <span class="subhead" style="display:block; margin-top:0.3rem; font-size:0.8rem;">This isn't a lifestyle. It's a tyranny the clothing industry imposed on you for a century. They sliced the world into three — business, sport, social — each with its own rules, its own fabrics, its own aesthetics. You're expected to "switch" between them. Change clothes. Change mindset. Change yourself.</span>
+    </p>
+
+    <p class="problem-body body">
+      但你的身体没有变。你还是你。
+      <span class="subhead" style="display:block; margin-top:0.3rem; font-size:0.8rem;">But your body hasn't changed. You're still you.</span>
+    </p>
+
+    <p class="problem-question">
+      为什么你的衣服要逼你变成别人？
+      <span class="subhead" style="display:block; margin-top:0.3rem; font-size:0.85rem;">Why should your clothes force you to become someone else?</span>
+    </p>
+
+    <!-- Timeline -->
+    <div class="timeline">
+      <div class="timeline-row">
+        <div class="timeline-time">08:00</div>
+        <div class="timeline-content">
+          <p class="timeline-text">挤进会议室，西装领带勒着脖子，衬衫黏在背上。空调房里刚凉下来，出地铁又是一身汗。</p>
+          <p class="timeline-en">Squeezing into a meeting room, tie choking your neck, shirt sticking to your back.</p>
+          <p class="timeline-tag">ARMOR 01</p>
+        </div>
       </div>
-      <div class="scene">
-        <div class="scene-time">12:30</div>
-        <div class="scene-text">午休去健身房。在更衣室里挤着换衣服。速干T恤太随意，运动短裤太短。练完一身汗，还得换回西装。</div>
-        <div class="scene-en">Lunch break at the gym. Changing in a cramped locker room. Drenched, then back into the suit.</div>
-        <div class="scene-outfit">盔甲 #2 / Armor #2</div>
+      <div class="timeline-row">
+        <div class="timeline-time">12:30</div>
+        <div class="timeline-content">
+          <p class="timeline-text">午休去健身房。在更衣室里挤着换衣服。速干T恤太随意，运动短裤太短。练完一身汗，还得换回西装。</p>
+          <p class="timeline-en">Lunch break at the gym. Changing in a cramped locker room. Drenched, then back into the suit.</p>
+          <p class="timeline-tag">ARMOR 02</p>
+        </div>
       </div>
-      <div class="scene">
-        <div class="scene-time">19:00</div>
-        <div class="scene-text">约了朋友喝酒。运动装太邋遢，正装太拘谨。站在衣柜前第三次问自己：我到底要去哪？</div>
-        <div class="scene-en">Drinks with friends. Gym clothes too sloppy, formal wear too stiff. Third time asking: where am I going?</div>
-        <div class="scene-outfit">盔甲 #3 / Armor #3</div>
+      <div class="timeline-row">
+        <div class="timeline-time">19:00</div>
+        <div class="timeline-content">
+          <p class="timeline-text">约了朋友喝酒。运动装太邋遢，正装太拘谨。站在衣柜前第三次问自己：我到底要去哪？</p>
+          <p class="timeline-en">Drinks with friends. Gym clothes too sloppy, formal wear too stiff. Third time asking: where am I going?</p>
+          <p class="timeline-tag">ARMOR 03</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== MANIFESTO — Consciousness Stream ========== -->
-  <section class="manifesto">
+  <hr class="hairline">
+
+  <!-- ════════════════════════════════════════
+       MANIFESTO
+       ════════════════════════════════════════ -->
+  <section class="manifesto-section">
     <div class="manifesto-inner">
-      <div class="m-label">The Manifesto</div>
+      <div class="m-label caption">The Manifesto</div>
 
-      <!-- BURST -->
-      <p class="burst">Stop changing.</p>
-      <p class="burst-cn">停下来。别换了。</p>
+      <!-- Staccato -->
+      <p class="m-burst">Stop changing.</p>
+      <p class="m-burst-cn">停下来。别换了。</p>
 
-      <p class="burst">Stop performing.</p>
-      <p class="burst-cn">别演了。</p>
+      <p class="m-burst">Stop performing.</p>
+      <p class="m-burst-cn">别演了。</p>
 
-      <p class="burst">Stop being three people.</p>
-      <p class="burst-cn">别再当三个人了。</p>
+      <p class="m-burst">Stop being three people.</p>
+      <p class="m-burst-cn">别再当三个人了。</p>
 
-      <!-- STREAM -->
-      <p class="stream" style="margin-top: 2rem;">Your wardrobe is a battlefield. Every morning you negotiate with fabric, with occasion, with expectation. You dress for who they want you to be — not who you are.</p>
-      <p class="stream-cn">你的衣柜是一个战场。每天早晨你和面料谈判，和场合谈判，和期待谈判。你为"他们想让你成为的人"穿衣——而不是为你自己。</p>
+      <!-- Legato -->
+      <p class="m-stream" style="margin-top:var(--space-lg);">
+        Your wardrobe is a battlefield. Every morning you negotiate with fabric, with occasion, with expectation. You dress for who they want you to be — not who you are.
+      </p>
+      <p class="m-stream-cn">
+        你的衣柜是一个战场。每天早晨你和面料谈判，和场合谈判，和期待谈判。你为"他们想让你成为的人"穿衣——而不是为你自己。
+      </p>
 
-      <p class="stream">We asked: what if the architecture of a garment could hold all three lives? What if one piece of fabric could carry you from the boardroom to the court to the bar — without apology, without compromise, without changing?</p>
-      <p class="stream-cn">我们问：如果一件衣服的建筑结构能承载三种人生呢？如果一块面料能带你从会议室到球场到酒吧——不需要道歉，不需要妥协，不需要更换？</p>
+      <p class="m-stream">
+        We asked: what if the architecture of a garment could hold all three lives? What if one piece of fabric could carry you from the boardroom to the court to the bar — without apology, without compromise, without changing?
+      </p>
+      <p class="m-stream-cn">
+        我们问：如果一件衣服的建筑结构能承载三种人生呢？如果一块面料能带你从会议室到球场到酒吧——不需要道歉，不需要妥协，不需要更换？
+      </p>
 
-      <!-- CAPS -->
-      <p class="caps">WE DON'T DO MULTI-SCENE.</p>
-      <p class="caps">WE DO NO-SCENE.</p>
+      <!-- Fortissimo -->
+      <p class="m-prophecy">We don't do multi-scene.</p>
+      <p class="m-prophecy">We do no-scene.</p>
 
-      <!-- STREAM -->
-      <p class="stream" style="margin-top: 1.5rem;">"Multi-scene" implies compromise. It says "this works for most situations." We don't do "most." We do ALL.</p>
-      <p class="stream-cn">"多场景"意味着妥协。它说"这在大多数情况下管用"。我们不做"大多数"。我们做"全部"。</p>
+      <!-- Legato returns -->
+      <p class="m-stream" style="margin-top:var(--space-lg);">
+        "Multi-scene" implies compromise. It says "this works for most situations." We don't do "most." We do all.
+      </p>
+      <p class="m-stream-cn">
+        "多场景"意味着妥协。它说"这在大多数情况下管用"。我们不做"大多数"。我们做"全部"。
+      </p>
 
-      <p class="stream">In the boardroom: "I'm ready." On the court: "I won't be constrained." At the bar: "I belong here." Same vessel. Same you.</p>
-      <p class="stream-cn">在会议室："我准备好了。"在球场上："我不会被束缚。"在酒吧："我属于这里。"同一件容器。同一个你。</p>
+      <p class="m-stream">
+        In the boardroom: "I'm ready." On the court: "I won't be constrained." At the bar: "I belong here." Same vessel. Same you.
+      </p>
+      <p class="m-stream-cn">
+        在会议室："我准备好了。"在球场上："我不会被束缚。"在酒吧："我属于这里。"同一件容器。同一个你。
+      </p>
 
-      <!-- VULNERABLE -->
-      <p class="vulnerable">"One outfit for everything? That's impossible." That's what they said about the iPhone. One device for calls, music, internet, everything. Impossible — until it wasn't.</p>
-      <p class="vulnerable-cn">"一件衣服搞定所有？不可能。"他们当年对iPhone也是这么说的。一个设备搞定通话、音乐、上网、一切。不可能——直到它成为可能。</p>
+      <!-- Pianissimo -->
+      <p class="m-vulnerable">
+        "One outfit for everything? That's impossible." That's what they said about the iPhone. One device for calls, music, internet, everything. Impossible — until it wasn't.
+      </p>
+      <p class="m-vulnerable-cn">
+        "一件衣服搞定所有？不可能。"他们当年对iPhone也是这么说的。一个设备搞定通话、音乐、上网、一切。不可能——直到它成为可能。
+      </p>
 
-      <!-- CLOSER -->
-      <p class="closer">The best design<br>is the one<br>you <span class="closer-accent">forget</span>.</p>
+      <!-- Crescendo -->
+      <p class="m-closer">
+        The best design<br>is the one<br>you <span>forget</span>.
+      </p>
     </div>
   </section>
 
-  <!-- ========== DESIGN PHILOSOPHY ========== -->
-  <section class="narrow">
-    <div class="h2-en left">Design Philosophy</div>
-    <h2 class="left">三条铁律。</h2>
-    <p>从Apple学到的减法。从Yeezy学到的直觉。从VØID学到的——没有第三条路。<span class="en">Subtraction from Apple. Intuition from Yeezy. From VØID — there is no third way.</span></p>
+  <hr class="hairline">
+
+  <!-- ════════════════════════════════════════
+       DESIGN PHILOSOPHY
+       ════════════════════════════════════════ -->
+  <section class="philosophy-section container">
+    <div class="caption" style="margin-bottom:var(--space-sm);">Design Philosophy</div>
+    <h2 class="headline" style="margin-bottom:var(--space-xs);">三条铁律。</h2>
+    <p class="philosophy-intro body">
+      从Apple学到的减法。从Yeezy学到的直觉。从VØID学到的——没有第三条路。
+      <span class="subhead" style="display:block; margin-top:0.3rem; font-size:0.8rem;">Subtraction from Apple. Intuition from Yeezy. From VØID — there is no third way.</span>
+    </p>
 
     <div class="philosophy-item">
-      <h3>减法至上。</h3>
-      <div class="h3-en">Saying No.</div>
-      <p>没有大Logo。没有多余口袋。没有"看起来很运动"的条纹。没有为了"功能性"牺牲美感的接缝。每一处设计都必须通过这个测试：去掉它，产品还成立吗？如果成立，它就不该存在。<span class="en">No big logos. No extra pockets. No "looks sporty" stripes. Every design must pass this test: remove it, does the product still work? If yes, it shouldn't exist.</span></p>
-      <p class="philosophy-example">iPod没有开关。停下来就是关。VØID的衣服也不需要"场合标识"——无场合就是它的场合。<span class="ex-cn">iPod had no power switch. Stopping was off. VØID doesn't need "occasion markers" — no occasion is its occasion.</span></p>
+      <div class="philosophy-num">01 / THREE</div>
+      <h3 class="philosophy-title">减法至上。</h3>
+      <div class="philosophy-title-en">Saying No.</div>
+      <p class="philosophy-body body">
+        没有大Logo。没有多余口袋。没有"看起来很运动"的条纹。没有为了"功能性"牺牲美感的接缝。每一处设计都必须通过这个测试：去掉它，产品还成立吗？如果成立，它就不该存在。
+        <span class="subhead" style="display:block; margin-top:0.3rem; font-size:0.8rem;">No big logos. No extra pockets. No "looks sporty" stripes. Every design must pass this test: remove it, does the product still work? If yes, it shouldn't exist.</span>
+      </p>
+      <div class="philosophy-quote">
+        iPod没有开关。停下来就是关。VØID的衣服也不需要"场合标识"——无场合就是它的场合。
+        <span class="q-cn">iPod had no power switch. Stopping was off. VØID doesn't need "occasion markers" — no occasion is its occasion.</span>
+      </div>
     </div>
 
     <div class="philosophy-item">
-      <h3>直觉驱动。</h3>
-      <div class="h3-en">Feel First. Explain Never.</div>
-      <p>如果一件衣服需要解释"这也可以穿去开会"，设计就失败了。你穿上它的第一秒就应该知道：这对了。不需要理由。不需要说明书。iPhone的滑动解锁不需要教程。Yeezy的轮廓不需要解释。VØID的裤子也不需要辩护。<span class="en">If a piece of clothing needs explaining "this can also be worn to meetings," the design has failed. The first second you put it on, you should know: this is right. No reasons. No manual. iPhone's slide-to-unlock needed no tutorial. Yeezy's silhouette needs no explanation. VØID pants need no defense.</span></p>
-      <p class="philosophy-example">Macintosh鼠标只有一个键。不是因为做不出两个，是因为一个就够了。每一件VØID单品也只有一个理由存在：让你在任何地方都自在。<span class="ex-cn">The Mac mouse had one button. Not because two was impossible — one was enough. Every VØID piece exists for one reason: to let you feel at ease anywhere.</span></p>
+      <div class="philosophy-num">02 / THREE</div>
+      <h3 class="philosophy-title">直觉驱动。</h3>
+      <div class="philosophy-title-en">Feel First. Explain Never.</div>
+      <p class="philosophy-body body">
+        如果一件衣服需要解释"这也可以穿去开会"，设计就失败了。你穿上它的第一秒就应该知道：这对了。不需要理由。不需要说明书。iPhone的滑动解锁不需要教程。Yeezy的轮廓不需要解释。VØID的裤子也不需要辩护。
+        <span class="subhead" style="display:block; margin-top:0.3rem; font-size:0.8rem;">If a piece of clothing needs explaining "this can also be worn to meetings," the design has failed. The first second you put it on, you should know: this is right. No reasons. No manual. iPhone's slide-to-unlock needed no tutorial. Yeezy's silhouette needs no explanation. VØID pants need no defense.</span>
+      </p>
+      <div class="philosophy-quote">
+        Macintosh鼠标只有一个键。不是因为做不出两个，是因为一个就够了。每一件VØID单品也只有一个理由存在：让你在任何地方都自在。
+        <span class="q-cn">The Mac mouse had one button. Not because two was impossible — one was enough. Every VØID piece exists for one reason: to let you feel at ease anywhere.</span>
+      </div>
     </div>
 
     <div class="philosophy-item">
-      <h3>一句话说清楚。</h3>
-      <div class="h3-en">One Sentence.</div>
-      <p>每一件产品都必须能用一句话说清楚它的价值。如果一句话说不清楚，回去重做。iPod不是"5GB硬盘+FireWire接口+超便携设计"，是"1000首歌装进口袋"。VØID的第一条裤子："从早会到晚宴，你不需要换裤子。"<span class="en">Every product must be explainable in one sentence. If one sentence isn't enough, go back. iPod wasn't "5GB hard drive + FireWire + ultra-portable." It was "1,000 songs in your pocket." VØID's first pant: "From morning meeting to evening dinner, you don't need to change pants."</span></p>
-      <p class="philosophy-example">如果产品发布需要三个以上卖点，回去找一个。那一个才是核心。其他的都是噪音。<span class="ex-cn">If a product launch needs more than one selling point, go back and find that one. That's the core. Everything else is noise.</span></p>
+      <div class="philosophy-num">03 / THREE</div>
+      <h3 class="philosophy-title">一句话说清楚。</h3>
+      <div class="philosophy-title-en">One Sentence.</div>
+      <p class="philosophy-body body">
+        每一件产品都必须能用一句话说清楚它的价值。如果一句话说不清楚，回去重做。iPod不是"5GB硬盘+FireWire接口+超便携设计"，是"1000首歌装进口袋"。VØID的第一条裤子："从早会到晚宴，你不需要换裤子。"
+        <span class="subhead" style="display:block; margin-top:0.3rem; font-size:0.8rem;">Every product must be explainable in one sentence. If one sentence isn't enough, go back. iPod wasn't "5GB hard drive + FireWire + ultra-portable." It was "1,000 songs in your pocket." VØID's first pant: "From morning meeting to evening dinner, you don't need to change pants."</span>
+      </p>
+      <div class="philosophy-quote">
+        如果产品发布需要三个以上卖点，回去找一个。那一个才是核心。其他的都是噪音。
+        <span class="q-cn">If a product launch needs more than one selling point, go back and find that one. That's the core. Everything else is noise.</span>
+      </div>
     </div>
   </section>
 
-  <!-- ========== BRAND VOICE ========== -->
+  <hr class="hairline">
+
+  <!-- ════════════════════════════════════════
+       BRAND VOICE
+       ════════════════════════════════════════ -->
   <section class="voice-section">
-    <div class="h2-en center">How We Speak</div>
-    <h2 class="center">我们怎么说话。</h2>
-    <p>VØID的声音不是"品牌调性指南"。它是一种态度。确定性。反叛。类比驱动。不说废话。<span class="en" style="color:var(--dust);">Not a "brand tone guide." An attitude. Certainty. Rebellion. Analogy-driven. No bullshit.</span></p>
+    <div class="container-narrow voice-intro">
+      <div class="caption" style="margin-bottom:var(--space-sm);">How We Speak</div>
+      <h2 class="headline" style="margin-bottom:var(--space-sm);">我们怎么说话。</h2>
+      <p class="body">
+        VØID的声音不是"品牌调性指南"。它是一种态度。确定性。反叛。类比驱动。不说废话。
+        <span class="subhead" style="display:block; margin-top:0.3rem; font-size:0.8rem;">Not a "brand tone guide." An attitude. Certainty. Rebellion. Analogy-driven. No bullshit.</span>
+      </p>
+    </div>
 
-    <div class="voice-pair">
-      <div class="voice-col">
-        <div class="voice-dont">We Don't Say / 我们不说</div>
-        <p>"这件衣服可能适合很多场景"<span class="voice-en">"This might work for many occasions"</span></p>
-        <p>"采用四向弹力面料科技"<span class="voice-en">"Featuring four-way stretch fabric technology"</span></p>
-        <p>"兼具商务与休闲风格"<span class="voice-en">"Combining business and casual styles"</span></p>
-        <p>"我们致力于提供优质穿搭"<span class="voice-en">"We are committed to providing quality outfits"</span></p>
+    <div class="voice-grid">
+      <div class="voice-col voice-col-dont">
+        <h4>We Don't Say</h4>
+        <p>
+          "这件衣服可能适合很多场景"
+          <span class="v-en">"This might work for many occasions"</span>
+        </p>
+        <p>
+          "采用四向弹力面料科技"
+          <span class="v-en">"Featuring four-way stretch fabric technology"</span>
+        </p>
+        <p>
+          "兼具商务与休闲风格"
+          <span class="v-en">"Combining business and casual styles"</span>
+        </p>
+        <p>
+          "我们致力于提供优质穿搭"
+          <span class="v-en">"We are committed to providing quality outfits"</span>
+        </p>
       </div>
-      <div class="voice-col">
-        <div class="voice-do">We Say / 我们说</div>
-        <p>"这件衣服适合所有场景。"<span class="voice-en">"This works for every occasion."</span></p>
-        <p>"像第二层皮肤。在任何地方都自在。"<span class="voice-en">"Like a second skin. At ease anywhere."</span></p>
-        <p>"你不需要切换。"<span class="voice-en">"You don't need to switch."</span></p>
-        <p>"你的衣柜里有12条裤子但每天只穿同一条？不是你的问题。是裤子的问题。"<span class="voice-en">"12 pants but you wear the same one daily? Not your problem. It's the pants' problem."</span></p>
+      <div class="voice-col voice-col-do">
+        <h4>We Say</h4>
+        <p>
+          "这件衣服适合所有场景。"
+          <span class="v-en">"This works for every occasion."</span>
+        </p>
+        <p>
+          "像第二层皮肤。在任何地方都自在。"
+          <span class="v-en">"Like a second skin. At ease anywhere."</span>
+        </p>
+        <p>
+          "你不需要切换。"
+          <span class="v-en">"You don't need to switch."</span>
+        </p>
+        <p>
+          "你的衣柜里有12条裤子但每天只穿同一条？不是你的问题。是裤子的问题。"
+          <span class="v-en">"12 pants but you wear the same one daily? Not your problem. It's the pants' problem."</span>
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- ========== FIRST PRODUCT — Architecture Grid ========== -->
+  <hr class="hairline">
+
+  <!-- ════════════════════════════════════════
+       FIRST PRODUCT
+       ════════════════════════════════════════ -->
   <section class="product-section">
-    <div class="h2-en center">First Product</div>
-    <h2 class="center">第一款产品。</h2>
-    <p class="center">不是十条。不是一整个系列。一件。<span class="en">Not ten. Not a whole collection. One.</span></p>
+    <div class="container-narrow product-intro">
+      <div class="caption" style="margin-bottom:var(--space-sm);">First Product</div>
+      <h2 class="headline" style="margin-bottom:var(--space-xs);">第一款产品。</h2>
+      <p class="body">
+        不是十条。不是一整个系列。一件。
+        <span class="subhead" style="display:block; margin-top:0.3rem; font-size:0.8rem;">Not ten. Not a whole collection. One.</span>
+      </p>
+    </div>
 
     <div class="product-name">VØID Vessel 01</div>
     <div class="product-name-en">The One Pant</div>
     <div class="product-tagline">"从早会到晚宴，你不需要换裤子。"</div>
     <div class="product-tagline-cn">"From morning meeting to evening dinner, you don't need to change pants."</div>
 
-    <div class="product-architecture">
+    <div class="arch-grid">
       <div class="arch-cell">
-        <div class="arch-label">Fabric / 面料</div>
+        <div class="arch-label label">Fabric</div>
         <div class="arch-value">四向弹力<br>抗皱透气</div>
         <div class="arch-value-en">4-Way Stretch<br>Wrinkle-Free</div>
       </div>
       <div class="arch-cell">
-        <div class="arch-label">Cut / 剪裁</div>
+        <div class="arch-label label">Cut</div>
         <div class="arch-value">锥形裤腿<br>中腰设计</div>
         <div class="arch-value-en">Tapered Leg<br>Mid-Rise</div>
       </div>
       <div class="arch-cell">
-        <div class="arch-label">Details / 细节</div>
+        <div class="arch-label label">Details</div>
         <div class="arch-value">隐藏式口袋<br>无外露Logo</div>
         <div class="arch-value-en">Hidden Pockets<br>No Visible Logo</div>
       </div>
       <div class="arch-cell">
-        <div class="arch-label">Scenes / 场景</div>
+        <div class="arch-label label">Scenes</div>
         <div class="arch-value">会议室<br>网球场<br>酒吧</div>
         <div class="arch-value-en">Boardroom<br>Court<br>Bar</div>
       </div>
     </div>
 
-    <p class="center" style="margin-top: 2rem; max-width: 420px;">一件容器。三种人生。零妥协。做到 insanely great。<span class="en">One vessel. Three lives. Zero compromise. Make it insanely great.</span></p>
+    <p class="body" style="max-width:380px; margin:0 auto;">
+      一件容器。三种人生。零妥协。做到 insanely great。
+      <span class="subhead" style="display:block; margin-top:0.3rem; font-size:0.8rem;">One vessel. Three lives. Zero compromise. Make it insanely great.</span>
+    </p>
   </section>
 
-  <!-- ========== MISSION ========== -->
-  <section class="narrow">
-    <p class="mission-statement">"To free humans from the architecture of occasion."</p>
-    <p class="mission-statement-cn">让人类从场合的建筑结构中解放出来。</p>
-    <p class="mission-footnote">*If you wear clothes, you deserve to be free from switching.</p>
-    <p class="mission-footnote-cn">*如果你穿衣服，你就值得不被切换。</p>
+  <hr class="hairline">
+
+  <!-- ════════════════════════════════════════
+       MISSION
+       ════════════════════════════════════════ -->
+  <section class="mission-section container-narrow">
+    <p class="mission-quote">
+      "To free humans from the architecture of occasion."
+    </p>
+    <p class="mission-quote-cn">
+      让人类从场合的建筑结构中解放出来。
+    </p>
+    <hr class="hairline-left" style="margin:var(--space-md) auto;">
+    <p class="mission-note">* If you wear clothes, you deserve to be free from switching.</p>
+    <p class="mission-note-cn">* 如果你穿衣服，你就值得不被切换。</p>
   </section>
 
-  <!-- ========== ONE MORE THING ========== -->
-  <section class="omt">
-    <div class="omt-label">One More Thing</div>
-    <h2>先做一件。</h2>
-    <div class="h2-en">Start with one.</div>
-    <p>做到 insanely great。然后让产品自己说话。<span class="omt-en">Make it insanely great. Then let the product speak for itself.</span></p>
-    <p>不要开线下店。不要请KOL。不要做品牌发布会。<span class="omt-en">No retail stores. No KOLs. No launch event.</span></p>
-    <p>找50个真正的目标用户——创业者、建筑师、程序员——给他们每人一件Vessel。让他们穿着它过真实的一天。拍下来。没有剧本。<span class="omt-en">Find 50 real users — founders, architects, coders — give each one a Vessel. Let them wear it through a real day. Film it. No script.</span></p>
-    <p>WE BELIEVE IN THE PRODUCT. NOT THE MARKETING.<span class="omt-en">我们相信产品，不相信营销。</span></p>
-    <p>Stay hungry. Stay foolish. Stay VØID.</p>
+  <hr class="hairline">
+
+  <!-- ════════════════════════════════════════
+       ONE MORE THING
+       ════════════════════════════════════════ -->
+  <section class="omt-section">
+    <div class="omt-label caption">One More Thing</div>
+    <h2 class="omt-headline headline">先做一件。</h2>
+    <div class="omt-sub subhead">Start with one.</div>
+
+    <p class="omt-body body">
+      做到 insanely great。然后让产品自己说话。
+      <span class="omt-en">Make it insanely great. Then let the product speak for itself.</span>
+    </p>
+    <p class="omt-body body">
+      不要开线下店。不要请KOL。不要做品牌发布会。
+      <span class="omt-en">No retail stores. No KOLs. No launch event.</span>
+    </p>
+    <p class="omt-body body">
+      找50个真正的目标用户——创业者、建筑师、程序员——给他们每人一件Vessel。让他们穿着它过真实的一天。拍下来。没有剧本。
+      <span class="omt-en">Find 50 real users — founders, architects, coders — give each one a Vessel. Let them wear it through a real day. Film it. No script.</span>
+    </p>
+    <p class="omt-body body" style="font-weight:700; color:var(--bone-dim);">
+      WE BELIEVE IN THE PRODUCT. NOT THE MARKETING.
+      <span class="omt-en" style="font-weight:400;">我们相信产品，不相信营销。</span>
+    </p>
+
+    <p class="omt-closing">
+      Stay hungry. Stay foolish. Stay VØID.
+    </p>
   </section>
 
-  <!-- ========== FOOTER ========== -->
+  <hr class="hairline">
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════ -->
   <footer>
     <p>VØID Brand Manifesto — Jobs × Ye</p>
   </footer>
